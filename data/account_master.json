@@ -1,0 +1,530 @@
+{
+  "GSPL_7445_ICICI DSA": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank - do not classify"
+  },
+  "GWPL-ICICI-5734": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank"
+  },
+  "GSPL_1248_HDFC DSA": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank"
+  },
+  "GSPL_1251_HDFC DSA": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank"
+  },
+  "GSPL_3352_Yes DSA": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank. Contra-DSA target account"
+  },
+  "GSPL_3342_Yes DSA": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank"
+  },
+  "GWPL-HDFC-3572": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank"
+  },
+  "GWPL-Indusind-9726": {
+    "account_type": "DSA - SKIP",
+    "credit": {
+      "head": "",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "",
+      "subhead": ""
+    },
+    "notes": "Peach highlighted. Leave blank"
+  },
+  "GAPL-ICICI-2414": {
+    "account_type": "Used Car Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "Used Car"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = Used Car sales. Debits follow narration rules"
+  },
+  "GSPL-ICICI-3418": {
+    "account_type": "New Auto Collection/Payment",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "New Auto"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = New Auto sales UNLESS narration says GIRNAR/TRANSFER (then Contra)"
+  },
+  "GSPL ICICI 7551": {
+    "account_type": "New Auto Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "New Auto"
+    },
+    "debit": {
+      "head": "Contra",
+      "subhead": "GSPL"
+    },
+    "notes": "Credits = New Auto. Debits AUTO SWEEP = Contra"
+  },
+  "GSPL ICICI 7670": {
+    "account_type": "Used Car Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "Used Car"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = Used Car. Small debits (MDR/GST) = Other Payments/Bank charges"
+  },
+  "GSPL-ICICI-6543": {
+    "account_type": "Joint Collection (New Auto, NA, Rupyy)",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "New Auto"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "CRITICAL: TRANSFER TO GIRNAR debits = Contra, NOT Bank charges. RTGS to Yes Bank = Contra"
+  },
+  "GSPL-HDFC-5435": {
+    "account_type": "Used Car Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "Used Car"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = Used Car. RTGS to GSPL entities = Contra. FD/Fund redemptions = Sale/Purchase FD. Chq Dep Ret = Sales Collection"
+  },
+  "GWPL-HDFC-7321": {
+    "account_type": "FS-MP Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "FS-MP"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = FS-MP. Even 'Gaadi Web' narration = FS-MP"
+  },
+  "GIRNAR HDFC 5846 Rupyy Collection": {
+    "account_type": "FS-MP Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "FS-MP"
+    },
+    "debit": {
+      "head": "Sales Collection",
+      "subhead": "FS-MP"
+    },
+    "notes": "Both credits AND debits = FS-MP (debits are NEFT refunds/returns, NOT Contra)"
+  },
+  "GAPL-ICICI-4877": {
+    "account_type": "Crack-Ed C2D Collections",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "Crack-Ed"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = Crack-Ed UNLESS FD closure (= Sale/Purchase FD + Treasury/Interest). TRF TO FD = Sale/Purchase FD"
+  },
+  "GAPL-HDFC-7741": {
+    "account_type": "Used Car C2D Collections",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "Used Car"
+    },
+    "debit": {
+      "head": "Other Receipts",
+      "subhead": ""
+    },
+    "notes": "Credits = Used Car. Debit Auto Sweep = Other Receipts"
+  },
+  "GAPL-HDFC-8412": {
+    "account_type": "Joint (Crack-Ed + UC) Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "Used Car"
+    },
+    "debit": {
+      "head": "Contra",
+      "subhead": ""
+    },
+    "notes": "Credits = Used Car UNLESS FD (Prin And Int/Fd Redeem). Debit Auto Sweep = Contra"
+  },
+  "GCPL-ICICI-5430": {
+    "account_type": "Collection/Payment",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "Used Car"
+    },
+    "debit": {
+      "head": "Contra",
+      "subhead": "GCPL"
+    },
+    "notes": "Credits = Used Car. Debits with CONTRA narration = Contra"
+  },
+  "GCPL-ICICI-5432": {
+    "account_type": "Collection/Payment",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "CONTRA credits = Contra. Int on FD = Treasury/Interest. FD clos = Sale/Purchase FD. DTAX = TDS. GST = Tax/GST Paid"
+  },
+  "PSPL-ICICI-5973": {
+    "account_type": "Collection/Payment",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "New Auto"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = New Auto. TATA AIA credit = Vendor Payment/Group Medical"
+  },
+  "PSPL-HDFC-6267": {
+    "account_type": "Collection (not in use)",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "New Auto"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Rarely used. Adhoc Stmt Chgs = Other Payments/Bank charges"
+  },
+  "PSPL-HDFC-0214": {
+    "account_type": "Collection",
+    "credit": {
+      "head": "Sales Collection",
+      "subhead": "New Auto"
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits = New Auto"
+  },
+  "GSPL-ICICI-6048": {
+    "account_type": "Internal Transfer",
+    "credit": {
+      "head": "Contra",
+      "subhead": "GSPL"
+    },
+    "debit": {
+      "head": "Contra",
+      "subhead": "GSPL"
+    },
+    "notes": "MOSTLY Contra. EXCEPTIONS: FD clos/TRF TO FD = Sale/Purchase FD. IGST on GRS = Other Payments. VARALAKSHMI/NEXTTECH = Investment in subsidiaries. GIRNAR CAPITAL = Inter Group"
+  },
+  "GIRNAR 1003 Rupyy Payment": {
+    "account_type": "FS-MP Vendor Payment",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Vendor Payment",
+      "subhead": "MRC"
+    },
+    "notes": "Debits = MRC. Credits: NEFT RETURN of salary names = Salary and Related. Other NEFT RETURN = Vendor Payment/Commission payouts"
+  },
+  "GSPL-HSBC - 1001": {
+    "account_type": "Joint Vendor Payment",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "CRITICAL: Debits to individual PERSON NAMES = Salary and Related/Reimbursement. IN HSBC xxx = Contra. CREDIT CARD PAYMENT = Other Payments. EROUTE = Bank charges. QUATTRO credits = Vendor Payment. GIRNAR debits: small amounts to people = VP, large to accounts = Contra"
+  },
+  "GAPL-HSBC-9001": {
+    "account_type": "Used Car/Crack-Ed Vendor Payment",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "CRITICAL: Debits to NORTHERN ARC/GYANDHAN/LORD KRISHNA = Sales Collection/Crack-Ed (loan disbursements). Person names = Salary/Reimbursement. GIRNAR = could be VP/MRC or Contra (check amount/context)"
+  },
+  "GCPL-HSBC-9001": {
+    "account_type": "Vendor Payment",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Debits to person names = Salary/Reimbursement. AIRTEL NEFT RETURN credit = VP/WSS"
+  },
+  "GWPL-HSBC-1001": {
+    "account_type": "FS-MP Vendor Payment (not in use)",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Vendor Payment",
+      "subhead": "Others"
+    },
+    "notes": "Rarely used"
+  },
+  "GSPL_3189_Yes DSA": {
+    "account_type": "DSA Commission Payouts",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Vendor Payment",
+      "subhead": "Commission payouts"
+    },
+    "notes": "NOT peach-highlighted - MUST classify. Debits (IMPS to person names) = VP/Commission payouts. CMS-A2A from GIRNAR = Contra. UPI/REV OF IMPS/NEFT-Return credits = VP/Commission payouts (reversals)"
+  },
+  "GSPL-Kotak-2129": {
+    "account_type": "OD Account",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "Credits from GIRNAR = Contra. Debits to other accounts = Contra. Int.Coll = Interest & WCTL fees. GST_DOCUMENTATION = Other Payments. Other debits = Vendor Payment"
+  },
+  "GSPL-Kotak-1567": {
+    "account_type": "Investment",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Sale / Purchase of FD & Investments",
+      "subhead": "Other investments made"
+    },
+    "notes": "GIRNAR credits = Contra. LOAN PAYMENT REFUND = Investment in associates/CollegeDekho. Debits = investments"
+  },
+  "GSPL-Yes -0286": {
+    "account_type": "OD (Corporate + DSA UTIB)",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "AXOS narration = Transaction due to account freezing. CBDT = TDS/Salary and Related. GST = Tax/GST. GIRNAR receipts = Contra. Transfers to 3352 = Contra-DSA. RTGS to AUBL with Investment = Sale/Purchase FD. Large RTGS to AUBL with Contra in narr = Sale/Purchase FD if to new account"
+  },
+  "GSPL-HDFC-5746 Salary": {
+    "account_type": "Salary",
+    "credit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "notes": "EXCEPTIONS: Credits from GIRNAR = Contra (salary funding). Large round debits 'Gs46nes' = Contra. ESOP credits from individuals = Other Receipts/ESOP. Adhoc Stmt Chgs = Other Payments/Bank charges"
+  },
+  "GAPL-HDFC-5759": {
+    "account_type": "Salary",
+    "credit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "notes": "Credits from Girnarsoft = Contra (salary funding). Adhoc Stmt Chgs = Other Payments/Bank charges"
+  },
+  "GSSPL-HDFC-5851": {
+    "account_type": "Salary",
+    "credit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "notes": "Standard salary account"
+  },
+  "GCPL-ICICI-5431": {
+    "account_type": "Salary",
+    "credit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Salary and Related",
+      "subhead": ""
+    },
+    "notes": "UPI/unknown credits = Other Receipts (not Salary)"
+  },
+  "GSSPL-ICICI-0477": {
+    "account_type": "GSSPL Operations",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "DTAX = TDS. Commission C2C Softex (Rs 100) = Other Payments/Bank charges. RECT OF GST on Commission = Other Payments/Bank charges. BIL/ONL = Contra/GSSPL \u2192 check, could be VP/RFC"
+  },
+  "GSSPL-ICICI-0342": {
+    "account_type": "GSSPL Operations",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "GRS international credits = Other Receipts or Contra depending on source"
+  },
+  "GSPL-CITIIN-9123": {
+    "account_type": "Foreign Payment",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Vendor Payment",
+      "subhead": "WSS"
+    },
+    "notes": "Debits = VP/WSS. INTER9123TO0286 = Contra. SWIFT incoming from TECHNOLOGY DEVELOPMENT = Investment in subsidiaries/Next Tech"
+  },
+  "GAPL-ICICI-4813": {
+    "account_type": "Used Car C2D Payments",
+    "credit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "See narration rules",
+      "subhead": ""
+    },
+    "notes": "DTAX = check narration for 'Salary' \u2192 TDS on Salary vs TDS other. Other debits = Vendor Payment"
+  },
+  "GAPL-HDFC-757": {
+    "account_type": "Used Car C2D Payments",
+    "credit": {
+      "head": "Contra",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Vendor Payment",
+      "subhead": "Others"
+    },
+    "notes": "Credit Auto Sweep = Contra"
+  },
+  "GAPL-Kotak-2557": {
+    "account_type": "POA Account",
+    "credit": {
+      "head": "Contra",
+      "subhead": ""
+    },
+    "debit": {
+      "head": "Other Payments",
+      "subhead": ""
+    },
+    "notes": "Credits from GIRNARSOFT = Contra. SETTLEMENT OBLIGATION debits = Other Payments"
+  }
+}
