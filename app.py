@@ -410,9 +410,10 @@ with tab3:
         st.download_button(
             label="⬇️ Export to Excel",
             data=excel_buf,
-            file_name=f"CICO_Classified_{datetime.now().strftime('%Y%m%d_%H%M')}.xlsx",
+            file_name=f"CICO_Classified_{datetime.now().strftime('%d%b%Y')}.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             key="btn_export_inline",
+            help="Downloads the full table with all your edits. Click again after making changes to get the updated file.",
         )
 
         st.caption("✏️ Click **Head**, **Sub-head 1**, or **Row Color** cell to edit inline  |  Tick checkbox to select rows for Delete / Color")
