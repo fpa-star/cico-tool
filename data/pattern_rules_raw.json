@@ -1,0 +1,587 @@
+[
+  {
+    "priority": "1-FD",
+    "narration": "TRF TO FD",
+    "direction": "debit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD made",
+    "notes": "Transfer to fixed deposit. Overrides Contra even on internal transfer accounts"
+  },
+  {
+    "priority": "1-FD",
+    "narration": "FD clos",
+    "direction": "credit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD redeem",
+    "notes": "FD closure \u2014 put FULL amount (principal + interest clubbed) as FD redeem. User will split interest later."
+  },
+  {
+    "priority": "1-FD",
+    "narration": "Prin And Int Auto Redeem",
+    "direction": "credit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD redeem",
+    "notes": "Auto-redemption of FD \u2014 put FULL clubbed amount as FD redeem. User will split interest later."
+  },
+  {
+    "priority": "1-FD",
+    "narration": "Fd Redeem Principal",
+    "direction": "credit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD redeem",
+    "notes": "FD principal redemption \u2014 put as FD redeem."
+  },
+  {
+    "priority": "1-FD",
+    "narration": "Fd Redeem Interest",
+    "direction": "credit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD redeem",
+    "notes": "Even if this line is clearly only interest, still classify as FD redeem. User will reclassify interest portion."
+  },
+  {
+    "priority": "1-FD",
+    "narration": "Int on FD/RD",
+    "direction": "credit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD redeem",
+    "notes": "Int on FD/RD \u2014 DO NOT classify as Treasury/Interest. Put as FD redeem. User will split later."
+  },
+  {
+    "priority": "1-FD",
+    "narration": "Nippon India Overnight Fund",
+    "direction": "credit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "Other investments redeemed",
+    "notes": "Mutual fund redemption \u2014 put FULL amount as Other investments redeemed. User will split realised gain/loss later."
+  },
+  {
+    "priority": "1-FD",
+    "narration": "Aditya Bslmf",
+    "direction": "credit",
+    "account_filter": "Any",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "Other investments redeemed",
+    "notes": "Mutual fund redemption \u2014 put FULL amount. User will split realised gain/loss later."
+  },
+  {
+    "priority": "1-FD",
+    "narration": "RTGS to AUBL + 'Investment' in narr",
+    "direction": "debit",
+    "account_filter": "GSPL-Yes-0286",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD made",
+    "notes": "Yes Bank to AU Bank investment transfers"
+  },
+  {
+    "priority": "1-FD",
+    "narration": "RTGS to AUBL + 'Contra' + new acct#",
+    "direction": "debit",
+    "account_filter": "GSPL-Yes-0286",
+    "head": "Sale / Purchase of FD & Investments",
+    "subhead": "FD made",
+    "notes": "Yes Bank transfers to AU Bank even if narr says Contra but goes to new/investment account"
+  },
+  {
+    "priority": "2-CDSA",
+    "narration": "000281300003352 or 3352",
+    "direction": "debit",
+    "account_filter": "Non-DSA accounts",
+    "head": "Contra - DSA accounts",
+    "subhead": "",
+    "notes": "Any transfer mentioning account 3352 (Yes DSA) from non-DSA account"
+  },
+  {
+    "priority": "2-CDSA",
+    "narration": "Contra0286TO 3352",
+    "direction": "debit",
+    "account_filter": "GSPL-Yes-0286",
+    "head": "Contra - DSA accounts",
+    "subhead": "",
+    "notes": "Yes Bank format for transfers to DSA 3352"
+  },
+  {
+    "priority": "3-INV",
+    "narration": "VARALAKSHMI ENTERPRISES",
+    "direction": "credit",
+    "account_filter": "GSPL-ICICI-6048",
+    "head": "Investment in subsidiaries",
+    "subhead": "InsuranceDekho",
+    "notes": "Subsidiary investment inflow"
+  },
+  {
+    "priority": "3-INV",
+    "narration": "NEXTTECH TECHNOLOG",
+    "direction": "any",
+    "account_filter": "GSPL-ICICI-6048",
+    "head": "Investment in subsidiaries",
+    "subhead": "Next Tech",
+    "notes": "Subsidiary company"
+  },
+  {
+    "priority": "3-INV",
+    "narration": "TECHNOLOGY DEVELOPMENT (SWIFT incoming)",
+    "direction": "credit",
+    "account_filter": "GSPL-CITIIN-9123",
+    "head": "Investment in subsidiaries",
+    "subhead": "Next Tech",
+    "notes": "Foreign subsidiary payment"
+  },
+  {
+    "priority": "3-INV",
+    "narration": "LOAN PAYMENT REFUND",
+    "direction": "credit",
+    "account_filter": "GSPL-Kotak-1567",
+    "head": "Investment in associates",
+    "subhead": "CollegeDekho",
+    "notes": "Associate company loan refund"
+  },
+  {
+    "priority": "3-IG",
+    "narration": "Girnar Capital Pvt Ltd (RTGS)",
+    "direction": "debit",
+    "account_filter": "GSPL-ICICI-6048",
+    "head": "Inter Group Receipts / Payments (other than Girnar India)",
+    "subhead": "Payments to GCAP",
+    "notes": "Inter-group payment to GCAP"
+  },
+  {
+    "priority": "4-SAL",
+    "narration": "Individual person name (NEFT/IMPS/RTGS)",
+    "direction": "debit",
+    "account_filter": "HSBC accounts (1001, 9001, GCPL-9001)",
+    "head": "Salary and Related",
+    "subhead": "Reimbursement to employees",
+    "notes": "CRITICAL: Person names on HSBC = employee reimbursements, NOT vendor payments"
+  },
+  {
+    "priority": "4-SAL",
+    "narration": "NEFT RETURN + person name + '(CRACK-ED)'",
+    "direction": "credit",
+    "account_filter": "GAPL-HSBC-9001",
+    "head": "Salary and Related",
+    "subhead": "Reimbursement to employees",
+    "notes": "Returned salary/reimbursement for Crack-Ed employees"
+  },
+  {
+    "priority": "4-SAL",
+    "narration": "NEFT RETURN + person name",
+    "direction": "credit",
+    "account_filter": "GIRNAR 1003 Rupyy Payment",
+    "head": "Salary and Related",
+    "subhead": "Salary payment including ESI, EPF, Ptax, etc",
+    "notes": "Returned salary payment"
+  },
+  {
+    "priority": "4-SAL",
+    "narration": "CBDT + YTP (large amounts)",
+    "direction": "debit",
+    "account_filter": "GSPL-Yes-0286",
+    "head": "Salary and Related",
+    "subhead": "TDS on On Roll Salary",
+    "notes": "Bulk TDS on salary. Check: if CBDT amount is very large and near salary TDS dates \u2192 Salary TDS"
+  },
+  {
+    "priority": "4-SAL",
+    "narration": "DTAX + context suggests salary TDS",
+    "direction": "debit",
+    "account_filter": "GAPL-ICICI-4813",
+    "head": "Salary and Related",
+    "subhead": "TDS on On Roll Salary",
+    "notes": "Check Dec patterns: some DTAX on 4813 are salary TDS"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "AUTO SWEEP / SWEEP IN / SWEEP FROM",
+    "direction": "any",
+    "account_filter": "Any",
+    "head": "Contra",
+    "subhead": "{Entity}",
+    "notes": "Inter-account sweep. Sub-head = entity name (GSPL/GAPL/GCPL/GWPL)"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "TRANSFER TO GIRNAR SOFTWARE PVT LTD",
+    "direction": "debit",
+    "account_filter": "GSPL-ICICI-6543, 3418",
+    "head": "Contra",
+    "subhead": "GSPL",
+    "notes": "CRITICAL: This is Contra, NOT Bank charges or Sales Collection"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "CONTRA (in CMS narration)",
+    "direction": "any",
+    "account_filter": "Any",
+    "head": "Contra",
+    "subhead": "{Entity}",
+    "notes": "CMS CONTRA transfers between accounts"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "GIRNAR SOFTWARE (RTGS/NEFT to group acct)",
+    "direction": "any",
+    "account_filter": "Any",
+    "head": "Contra",
+    "subhead": "{Entity}",
+    "notes": "Group entity transfers. BUT on HSBC: small amounts to person-like accounts = Vendor Payment"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "IN HSBC 054-xxx",
+    "direction": "debit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Contra",
+    "subhead": "",
+    "notes": "Internal HSBC account transfer"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "INTER9123TO0286",
+    "direction": "debit",
+    "account_filter": "GSPL-CITIIN-9123",
+    "head": "Contra",
+    "subhead": "GSPL",
+    "notes": "Citi to Yes Bank inter-account transfer"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "2129 TO 0286",
+    "direction": "debit",
+    "account_filter": "GSPL-Kotak-2129",
+    "head": "Contra",
+    "subhead": "GSPL",
+    "notes": "Kotak to Yes Bank transfer"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "GIRNARSOFT AUTOMOBI (RTGS)",
+    "direction": "credit",
+    "account_filter": "GAPL-Kotak-2557",
+    "head": "Contra",
+    "subhead": "GAPL",
+    "notes": "POA account funding from group"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "Gs46nes (large round amounts)",
+    "direction": "debit",
+    "account_filter": "GSPL-HDFC-5746 Salary",
+    "head": "Contra",
+    "subhead": "GSPL",
+    "notes": "Bulk salary funding transfers OUT of salary account"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "CMS-A2A from GIRNAR",
+    "direction": "credit",
+    "account_filter": "GSPL_3189_Yes DSA",
+    "head": "Contra",
+    "subhead": "GSPL",
+    "notes": "Funding to DSA account from group"
+  },
+  {
+    "priority": "5-CTR",
+    "narration": "GIRNAR credits (salary funding)",
+    "direction": "credit",
+    "account_filter": "Salary accounts (5746, 5759)",
+    "head": "Contra",
+    "subhead": "{Entity}",
+    "notes": "Group funding of salary accounts"
+  },
+  {
+    "priority": "6-VP",
+    "narration": "NORTHERN ARC CAPITAL",
+    "direction": "debit",
+    "account_filter": "GAPL-HSBC-9001",
+    "head": "Sales Collection",
+    "subhead": "Crack-Ed",
+    "notes": "Crack-Ed C2D loan disbursement to NBFC partner"
+  },
+  {
+    "priority": "6-VP",
+    "narration": "GYANDHAN FINANCIAL",
+    "direction": "debit",
+    "account_filter": "GAPL-HSBC-9001",
+    "head": "Sales Collection",
+    "subhead": "Crack-Ed",
+    "notes": "Crack-Ed C2D loan disbursement"
+  },
+  {
+    "priority": "6-VP",
+    "narration": "LORD KRISHNA FINANCIAL",
+    "direction": "debit",
+    "account_filter": "GAPL-HSBC-9001",
+    "head": "Sales Collection",
+    "subhead": "Crack-Ed",
+    "notes": "Crack-Ed C2D loan disbursement"
+  },
+  {
+    "priority": "3189-06-01 00:00:00",
+    "narration": "IMPS to person names",
+    "direction": "debit",
+    "account_filter": "GSPL_3189_Yes DSA",
+    "head": "Vendor Payment",
+    "subhead": "Commission payouts",
+    "notes": "Commission disbursements to agents"
+  },
+  {
+    "priority": "3189-06-01 00:00:00",
+    "narration": "REV OF IMPS / NEFT-Return / UPI credits",
+    "direction": "credit",
+    "account_filter": "GSPL_3189_Yes DSA",
+    "head": "Vendor Payment",
+    "subhead": "Commission payouts",
+    "notes": "Reversed/returned commission payments - keep as VP/Commission payouts"
+  },
+  {
+    "priority": "7-TAX",
+    "narration": "DTAX",
+    "direction": "debit",
+    "account_filter": "Most accounts",
+    "head": "Tax Payments (GST & TDS Excl. Salaries)",
+    "subhead": "TDS ( other than Salary)",
+    "notes": "Default DTAX = TDS other than Salary. Exception: see salary TDS rules above"
+  },
+  {
+    "priority": "7-TAX",
+    "narration": "CBDT (non-salary context)",
+    "direction": "debit",
+    "account_filter": "GSPL-Yes-0286",
+    "head": "Tax Payments (GST & TDS Excl. Salaries)",
+    "subhead": "TDS ( other than Salary)",
+    "notes": "CBDT if not salary-related"
+  },
+  {
+    "priority": "7-TAX",
+    "narration": "GST / GIB...GST",
+    "direction": "debit",
+    "account_filter": "GCPL-5432 and similar",
+    "head": "Tax Payments (GST & TDS Excl. Salaries)",
+    "subhead": "GST Paid",
+    "notes": "GST payment to government"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "EZY/CC ON UPI MDR+GST / MDR",
+    "direction": "debit",
+    "account_filter": "Collection accounts",
+    "head": "Other Payments",
+    "subhead": "Bank charges",
+    "notes": "Payment gateway MDR charges on collections"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "Rupay Mdr Rcvry",
+    "direction": "debit",
+    "account_filter": "Any",
+    "head": "Other Payments",
+    "subhead": "Bank charges",
+    "notes": "MDR recovery by bank"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "Commission - C2C - Softex (Rs 100)",
+    "direction": "debit",
+    "account_filter": "GSSPL-ICICI-0477",
+    "head": "Other Payments",
+    "subhead": "Bank charges",
+    "notes": "C2C softex commission charges"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "RECT OF GST on Commission/Softex",
+    "direction": "debit",
+    "account_filter": "GSSPL-ICICI-0477",
+    "head": "Other Payments",
+    "subhead": "Bank charges",
+    "notes": "GST on bank service charges = Bank charges, NOT Tax Payments"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "EROUTE TECHNOLOGIES",
+    "direction": "debit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Other Payments",
+    "subhead": "Bank charges",
+    "notes": "Payment gateway charges"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "Adhoc Stmt Chgs",
+    "direction": "debit",
+    "account_filter": "Any (including salary accounts)",
+    "head": "Other Payments",
+    "subhead": "Bank charges",
+    "notes": "Bank statement charges - overrides Salary on salary accounts"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "IGST on GRS (small amounts)",
+    "direction": "debit",
+    "account_filter": "GSPL-ICICI-6048, 6543",
+    "head": "Other Payments",
+    "subhead": "Bank charges",
+    "notes": "IGST slab charges on GRS transactions"
+  },
+  {
+    "priority": "8-BNK",
+    "narration": "GST_DOCUMENTATION CHARGES",
+    "direction": "debit",
+    "account_filter": "GSPL-Kotak-2129",
+    "head": "Other Payments",
+    "subhead": "Other Payments",
+    "notes": "OD documentation charges"
+  },
+  {
+    "priority": "8-OP",
+    "narration": "CREDIT CARD PAYMENT",
+    "direction": "debit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Other Payments",
+    "subhead": "Credit card payment",
+    "notes": "Corporate credit card bill payment"
+  },
+  {
+    "priority": "8-OP",
+    "narration": "BAPUS AUTOBIZ / Dealer name",
+    "direction": "debit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Other Payments",
+    "subhead": "Dealer Refund",
+    "notes": "Refund to car dealer"
+  },
+  {
+    "priority": "8-OP",
+    "narration": "SETTLEMENT OBLIGATION",
+    "direction": "debit",
+    "account_filter": "GAPL-Kotak-2557",
+    "head": "Other Payments",
+    "subhead": "",
+    "notes": "POA settlement obligation"
+  },
+  {
+    "priority": "9-INT",
+    "narration": "Int.Coll (OD interest)",
+    "direction": "debit",
+    "account_filter": "GSPL-Kotak-2129",
+    "head": "Interest & WCTL fees",
+    "subhead": "",
+    "notes": "OD account interest charge"
+  },
+  {
+    "priority": "9-INT",
+    "narration": "DEBIT INTEREST",
+    "direction": "debit",
+    "account_filter": "HSBC accounts",
+    "head": "Interest & WCTL fees",
+    "subhead": "",
+    "notes": "Interest charge on HSBC account"
+  },
+  {
+    "priority": "9-INT",
+    "narration": "DEPOSIT INTEREST",
+    "direction": "credit",
+    "account_filter": "HSBC accounts",
+    "head": "Treasury receipts",
+    "subhead": "Interest income",
+    "notes": "Bank deposit interest received"
+  },
+  {
+    "priority": "10-ESOP",
+    "narration": "Individual name credit on salary account",
+    "direction": "credit",
+    "account_filter": "GSPL-HDFC-5746",
+    "head": "Other Receipts",
+    "subhead": "ESOP related receipts",
+    "notes": "ESOP exercise payment received from employee"
+  },
+  {
+    "priority": "10-FRZ",
+    "narration": "AXOS",
+    "direction": "any",
+    "account_filter": "GSPL-Yes-0286",
+    "head": "Transaction due to account freezing",
+    "subhead": "",
+    "notes": "Only AXOS transactions = account freezing"
+  },
+  {
+    "priority": "11-VP",
+    "narration": "QUATTRO MANAGEMENT",
+    "direction": "credit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Vendor Payment",
+    "subhead": "Others",
+    "notes": "Vendor credit/refund"
+  },
+  {
+    "priority": "11-VP",
+    "narration": "AIRTEL LIMITED (NEFT RETURN)",
+    "direction": "credit",
+    "account_filter": "GCPL-HSBC-9001",
+    "head": "Vendor Payment",
+    "subhead": "WSS",
+    "notes": "WSS vendor return"
+  },
+  {
+    "priority": "11-VP",
+    "narration": "NEFT RETURN (non-person, non-salary)",
+    "direction": "credit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Vendor Payment",
+    "subhead": "Others",
+    "notes": "Generic vendor payment returns"
+  },
+  {
+    "priority": "11-VP",
+    "narration": "R A B PRODUCTIONS",
+    "direction": "credit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Vendor Payment",
+    "subhead": "Production expense - PD",
+    "notes": "Production vendor credit"
+  },
+  {
+    "priority": "11-VP",
+    "narration": "AIRTEL (NEFT RETURN)",
+    "direction": "credit",
+    "account_filter": "GSPL-HSBC-1001",
+    "head": "Vendor Payment",
+    "subhead": "RFC",
+    "notes": "RFC vendor return"
+  },
+  {
+    "priority": "11-VP",
+    "narration": "TATA AIA LIFE INSURANCE",
+    "direction": "credit",
+    "account_filter": "PSPL-ICICI-5973",
+    "head": "Vendor Payment",
+    "subhead": "Group Medical insurance",
+    "notes": "Insurance vendor credit"
+  },
+  {
+    "priority": "11-VP",
+    "narration": "BIL/ONL (utility payment)",
+    "direction": "debit",
+    "account_filter": "GSSPL-ICICI-0477",
+    "head": "Vendor Payment",
+    "subhead": "RFC",
+    "notes": "Online bill payment \u2014 could be RFC"
+  },
+  {
+    "priority": "5846-12-01 00:00:00",
+    "narration": "NEFT Dr / FT Refund",
+    "direction": "debit",
+    "account_filter": "GIRNAR HDFC 5846 Rupyy Collection",
+    "head": "Sales Collection",
+    "subhead": "FS-MP",
+    "notes": "Debits on Rupyy collection = FS-MP (returns/refunds within FS-MP business), NOT Contra"
+  }
+]
