@@ -1,0 +1,170 @@
+[
+  {
+    "rule": "G1",
+    "description": "HSBC PERSON NAMES = SALARY: On HSBC accounts (GSPL-HSBC-1001, GAPL-HSBC-9001, GCPL-HSBC-9001), debits to individual person names (KRISHAN KUMAR, KANIKA MALIK, ROHIT RATHOR etc) are ALWAYS 'Salary and Related / Reimbursement to employees'. These are employee expense reimbursements, NOT vendor payments. The narration has person name + bank account reference. This was my BIGGEST mistake (674 errors)."
+  },
+  {
+    "rule": "G2",
+    "description": "GIRNAR SOFTWARE \u2260 ALWAYS CONTRA: On HSBC accounts, 'GIRNAR SOFTWARE PRIVATE LIMITED' in narration can be EITHER Contra (large transfers between group accounts) OR Vendor Payment (smaller payments to vendors processed through GIRNAR). Check: if amount is small (< 1L) and goes to a person-like account \u2192 Vendor Payment. If large round amount to a known group account \u2192 Contra."
+  },
+  {
+    "rule": "G3",
+    "description": "6543 'TRANSFER TO GIRNAR' = CONTRA, NOT BANK CHARGES: On GSPL-ICICI-6543, debits with 'TRANSFER TO GIRNAR SOFTWARE PVT LTD' or CMS Mumbai TRANSFER narration are Contra (internal sweeps to collection pool). I wrongly classified these as Other Payments/Bank charges. Same on 3418 \u2014 credits with this narration are also Contra."
+  },
+  {
+    "rule": "G4",
+    "description": "FD/INVESTMENT OVERRIDES EVERYTHING: Any narration with TRF TO FD, FD clos, Prin And Int, Nippon, Bslmf, AUBL+Investment \u2192 Sale / Purchase of FD & Investments. This overrides the account's default classification. Even on 6048 (default Contra) or 4877 (default Crack-Ed), FD transactions get the FD head."
+  },
+  {
+    "rule": "G5",
+    "description": "DO NOT SPLIT INTEREST FROM PRINCIPAL: When FD closes or investments are redeemed, put the FULL clubbed amount (principal + interest together) as 'Sale / Purchase of FD & Investments / FD redeem' or 'Other investments redeemed'. Even if a separate line says 'Fd Redeem Interest' or 'Int on FD/RD' or 'Realised gain', classify it ALL as FD redeem / Other investments redeemed. The user will manually split interest income and realised gains later."
+  },
+  {
+    "rule": "G6",
+    "description": "NEFT RETURNS INHERIT THE ORIGINAL TRANSACTION'S HEAD: If the original payment was salary/reimbursement and it bounced back, the NEFT RETURN credit should be classified as Salary and Related (not Other Receipts). If original was vendor payment \u2192 Vendor Payment. Look at the person/company name in the NEFT RETURN narration to determine what the original payment was."
+  },
+  {
+    "rule": "G7",
+    "description": "SMALL GST ON BANK SERVICES \u2260 TAX PAYMENTS: 'RECT OF GST' on Commission/Softex entries (Rs 18 each on GSSPL-0477) = Other Payments / Bank charges. 'IGST slab' on GRS transactions (6048, 6543) = Other Payments / Bank charges. Only actual GST payments to government (GIB/GST narration, large amounts) = Tax Payments / GST Paid."
+  },
+  {
+    "rule": "G8",
+    "description": "GSPL_3189 CREDITS ARE MOSTLY COMMISSION REVERALS: On GSPL_3189_Yes DSA, credits that are UPI, REV OF IMPS, NEFT-Return, or IMPS reversals = Vendor Payment / Commission payouts (reversed/failed commission disbursements). Only CMS-A2A credits from GIRNAR = Contra. I wrongly marked many credits as Contra or Sales Collection."
+  },
+  {
+    "rule": "G9",
+    "description": "SALARY ACCOUNT EXCEPTIONS: On salary accounts (5746, 5759, 5851, 5431), NOT everything is Salary. Large round debits with 'Gs46nes' narration on 5746 = Contra (bulk funding transfers OUT). Credits from GIRNAR/Girnarsoft = Contra (salary funding IN). ESOP credits from individuals = Other Receipts/ESOP. Adhoc Stmt Chgs = Other Payments/Bank charges."
+  },
+  {
+    "rule": "G10",
+    "description": "RUPYY 5846 DEBITS = FS-MP, NOT CONTRA: On GIRNAR HDFC 5846 Rupyy Collection, debits (NEFT Dr, FT Refund to GWPL-7321) are Sales Collection / FS-MP (business-related returns/adjustments within FS-MP). I wrongly classified these as Contra thinking they were inter-account transfers."
+  },
+  {
+    "rule": "G11",
+    "description": "CRACK-ED LOAN DISBURSEMENTS ON HSBC: On GAPL-HSBC-9001, debits to financial companies like NORTHERN ARC CAPITAL, GYANDHAN FINANCIAL, LORD KRISHNA FINANCIAL are Sales Collection / Crack-Ed (C2D loan disbursements to NBFC partners). NOT Vendor Payment."
+  },
+  {
+    "rule": "G12",
+    "description": "GAPL-KOTAK-2557 (POA ACCOUNT): Credits from GIRNARSOFT AUTOMOBI = Contra (funding from group). I wrongly classified as Other Receipts."
+  },
+  {
+    "rule": "G13",
+    "description": "GSPL-YES-0286 COMPLEX RULES: (a) AXOS only = Transaction due to account freezing. (b) CBDT large amounts near salary dates = Salary/TDS on Salary. (c) RTGS to AUBL with 'Investment' or to new AU Bank accounts = Sale/Purchase FD/FD made. (d) Transfers to 3352 = Contra-DSA. (e) GIRNAR credits = Contra."
+  },
+  {
+    "rule": "G14",
+    "description": "HEAD NAME FORMAT MATTERS: Use exact names from CICO Updated tab. Key: 'Sale / Purchase of FD & Investments' (spaces around /), NOT 'Sale/Purchase FD'. 'Tax Payments (GST & TDS Excl. Salaries)' not 'Tax Payments'. 'TDS ( other than Salary)' has a space before 'other'."
+  },
+  {
+    "rule": "G15",
+    "description": "GCPL-ICICI-5432 IS NOT JUST SALARY: Despite being labeled a 'salary' entity, 5432 has diverse transactions: CONTRA credits = Contra, Int on FD = Treasury/Interest, FD clos = Sale/Purchase FD, DTAX = TDS, GST = Tax/GST Paid. Check narration carefully."
+  },
+  {
+    "rule": "G16",
+    "description": "OD INTEREST CHARGES: 'Int.Coll' on GSPL-Kotak-2129 and 'DEBIT INTEREST' on HSBC accounts = Interest & WCTL fees. NOT Vendor Payment."
+  },
+  {
+    "rule": "G17",
+    "description": "DOCUMENTATION/STATEMENT CHARGES: 'Adhoc Stmt Chgs' and 'DOCUMENTATION CHARGES' on ANY account (including salary accounts) = Other Payments / Bank charges. On Kotak-2129, 'GST_DOCUMENTATION CHARGES' = Other Payments / Other Payments."
+  },
+  {
+    "rule": "G18",
+    "description": "CONTRA MATCHING: After initial classification, contra entries should ideally have matching opposite legs on the same date with net = 0. But many contra legs flow into DSA accounts (which are left blank), so non-zero nets on some dates are EXPECTED and CORRECT."
+  },
+  {
+    "rule": "G19",
+    "description": "GSSPL-ICICI-0477 SPECIAL: BIL/ONL entries could be either Contra/GSSPL or VP/RFC \u2014 check if it's a utility bill (= RFC) or an inter-account bill payment (= Contra). Small 'Commission C2C Softex' debits of Rs 100 = Other Payments / Bank charges."
+  },
+  {
+    "rule": "G20",
+    "description": "GSPL-HDFC-5435 MIXED TRANSACTIONS: Credits are mostly Used Car collections, BUT: RTGS to GSPL entities = Contra. 'Chq Dep Ret' (cheque deposit return) = Sales Collection / Used Car (not Contra). 'Prin And Int Auto Redeem' = Sale/Purchase FD. Fund redemptions (Nippon/Birla) = Sale/Purchase FD."
+  },
+  {
+    "rule": "G21",
+    "description": "VENDOR PAYMENT DEFAULT: When a debit is clearly a vendor payment but the specific sub-category is unknown, use 'Vendor Payment / Others'. Do NOT try to guess the detailed sub-head (Marketing, WSS, LPS etc) unless the narration clearly indicates it."
+  },
+  {
+    "rule": "G22",
+    "description": "GSPL-ICICI-6048 IS MOSTLY CONTRA BUT HAS EXCEPTIONS: Default = Contra/GSPL. Exceptions: FD transactions \u2192 Sale/Purchase FD. IGST slab \u2192 Other Payments. VARALAKSHMI/NEXTTECH \u2192 Investment in subsidiaries. Girnar Capital \u2192 Inter Group. CMS CONTRA to other accounts (with CONTRA in narr) \u2192 Contra."
+  },
+  {
+    "rule": "G23",
+    "description": "CHEQUE DEPOSITS AND RETURNS: 'Chq Dep' (cheque deposit) on collection accounts = Sales Collection. 'Chq Dep Ret' (cheque deposit return/bounce) on collection accounts = STILL Sales Collection (it's a return of a sales cheque, stays in Sales Collection category with same sub-head)."
+  },
+  {
+    "rule": "G24",
+    "description": "WHEN IN DOUBT \u2014 CHECK DEC DUMP: If a narration pattern is unclear, check the previous month's classified dump for the same account + similar narration. Dec classifications should be the reference standard. If Dec doesn't have a matching pattern, flag as TBD for manual review."
+  },
+  {
+    "rule": "G25",
+    "description": "GSPL-HSBC-1001 CREDITS ARE DIVERSE: Not all credits are Other Receipts. QUATTRO MANAGEMENT = Vendor Payment/Others. NEFT FROM vendor names (R A B PRODUCTIONS) = Vendor Payment with appropriate sub-head. NEFT RETURN of vendor payment = Vendor Payment. IMPS from individuals = check if it's a refund/return."
+  },
+  {
+    "rule": "G26",
+    "description": "PRIORITY ORDER: When multiple rules could apply, use this priority: (1) FD/Investment keywords \u2192 Sale/Purchase FD, (2) Contra-DSA (3352) \u2192 Contra-DSA, (3) Investment in subsidiaries/associates, (4) Inter Group, (5) Salary/Reimbursement person names, (6) Contra patterns, (7) Tax patterns, (8) Bank charges, (9) Other specific patterns, (10) Account default."
+  },
+  {
+    "rule": "G27",
+    "description": "PSPL-HDFC-6267 AND PSPL-HDFC-0214: These PSPL accounts are mostly inactive. Adhoc Stmt Chgs = Other Payments / Bank charges (NOT Contra even though account is rarely used). Any actual transactions \u2192 Sales Collection / New Auto for credits."
+  },
+  {
+    "rule": "G28",
+    "description": "GSPL-CITIIN-9123 INCOMING SWIFT: SWIFT credits with 'TECHNOLOGY DEVELOPMENT' = Investment in subsidiaries / Next Tech. Regular debits = Vendor Payment / WSS. Transfers with INTER9123TO0286 = Contra."
+  },
+  {
+    "rule": "Step",
+    "description": "Instructions"
+  },
+  {
+    "rule": "STEP 0",
+    "description": "READ THIS TAB FIRST. Read all 5 sections of this Claude Classification tab completely before touching any data. Understand all accounts, narration patterns, gotchas, and head names."
+  },
+  {
+    "rule": "STEP 1",
+    "description": "READ THE BANK DUMP TAB. Identify: (a) Which columns contain what (Account Name, Account No, Debit, Credit, Narration, Head, Sub-Head1, Sub-Head2), (b) Which row headers start at, (c) How many data rows there are, (d) Which columns need to be filled."
+  },
+  {
+    "rule": "STEP 2",
+    "description": "READ CICO UPDATED TAB. Get exact head names as they appear there. Do NOT guess head names \u2014 copy exact spelling including spaces, parentheses, capitalisation."
+  },
+  {
+    "rule": "STEP 3",
+    "description": "READ PREVIOUS MONTH'S DUMP. Look at the classified previous month dump (same file) to understand patterns for each account. Use it as the primary reference for classification."
+  },
+  {
+    "rule": "STEP 4",
+    "description": "IDENTIFY DSA ACCOUNTS. Check which accounts have peach (#FCE4D6) background highlighting. These are DSA accounts \u2014 leave their P, Q, R columns COMPLETELY BLANK."
+  },
+  {
+    "rule": "STEP 5",
+    "description": "CLASSIFY ACCOUNT BY ACCOUNT. Process one account at a time. For each account: (a) Look up the account in Section 1 (Account Master) for default heads. (b) Read ALL narration text for each row. (c) Apply Section 2 narration patterns IN PRIORITY ORDER (1-FD first, then 2-CDSA, then 3-INV, etc). (d) If no narration pattern matches, use the account default. (e) Write Head in P column, Sub-head in Q column."
+  },
+  {
+    "rule": "STEP 6",
+    "description": "PROCESS IN THIS ORDER: (a) Simple accounts first (Salary accounts, single-type accounts), (b) Collection accounts (2414, 3418, 7551, 7670, 6543, 5435, 7321, 5846, 4877, 7741, 8412, 5430), (c) Internal transfer (6048), (d) Vendor/HSBC accounts (HSBC-1001, HSBC-9001, GCPL-HSBC, 1003 Rupyy), (e) DSA 3189, (f) OD/Investment (Kotak-2129, Kotak-1567, Yes-0286), (g) Remaining accounts."
+  },
+  {
+    "rule": "STEP 7",
+    "description": "CHECK HSBC ACCOUNTS EXTRA CAREFULLY. The #1 mistake category (674 errors!) was HSBC person-name debits. For EVERY debit on HSBC accounts, ask: does the narration contain a person's name? If yes \u2192 Salary and Related / Reimbursement. If company name \u2192 check if vendor or group entity."
+  },
+  {
+    "rule": "STEP 8",
+    "description": "CHECK FD/INVESTMENT KEYWORDS. Before applying any account default, scan narration for: TRF TO FD, FD clos, Prin And Int, Int on FD, Nippon, Bslmf, AUBL, Investment. If found \u2192 Sale / Purchase of FD or Treasury receipts. This overrides ALL account defaults."
+  },
+  {
+    "rule": "STEP 9",
+    "description": "VERIFY: After classifying all rows, check: (a) Zero unclassified non-DSA rows, (b) Zero classified DSA rows, (c) All heads match exact CICO Updated spelling, (d) No 'Vendor Payment' on HSBC person-name debits."
+  },
+  {
+    "rule": "STEP 10",
+    "description": "CONTRA MATCHING (optional): After all rows classified, find same-date debit+credit pairs where narrations reference the same transfer. Verify they net to zero (excluding DSA accounts which absorb imbalances)."
+  },
+  {
+    "rule": "WHAT TO ASK USER",
+    "description": "Before starting, confirm: (1) Which columns to fill (usually P, Q, R), (2) Any new accounts not in the Account Master, (3) Any rule changes from previous month, (4) Whether to do detailed vendor sub-classification or just use 'Others'."
+  },
+  {
+    "rule": "WHAT CLAUDE NEEDS",
+    "description": "MINIMUM: (1) This Claude Classification tab, (2) The bank dump tab with data. RECOMMENDED: (3) CICO Updated tab (for exact head names), (4) Previous month's classified dump. OPTIONAL: (5) Classification Rules tab (if rules updated), (6) Account Dump tab (if new accounts)."
+  }
+]
