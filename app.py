@@ -402,6 +402,19 @@ with tab3:
                                 key="color_picker", label_visibility="collapsed")
         apply_color        = tb8.button("🎨 Apply Color",                    key="btn_color")
 
+        # ── Export button — downloads current edited table as Excel ──────
+        import io
+        excel_buf = io.BytesIO()
+        st.session_state.edited_df.to_excel(excel_buf, index=False, engine="openpyxl")
+        excel_buf.seek(0)
+        st.download_button(
+            label="⬇️ Export to Excel",
+            data=excel_buf,
+            file_name=f"CICO_Classified_{datetime.now().strftime('%Y%m%d_%H%M')}.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            key="btn_export_inline",
+        )
+
         st.caption("✏️ Click **Head**, **Sub-head 1**, or **Row Color** cell to edit inline  |  Tick checkbox to select rows for Delete / Color")
 
         # ── Filters ───────────────────────────────────────────────────────
