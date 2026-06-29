@@ -1,0 +1,113 @@
+{
+  "heads": [
+    "Sales Collection",
+    "Other Receipts",
+    "Salary and Related",
+    "Tax Payments (GST & TDS Excl. Salaries)",
+    "Vendor Payment",
+    "Other Payments",
+    "Contra - DSA accounts",
+    "Contra - Unidentified",
+    "Treasury receipts",
+    "Sale / Purchase of FD & Investments",
+    "Inter Group Receipts / Payments (other than Girnar India)",
+    "Investment in subsidiaries",
+    "Investment in associates",
+    "Interest & WCTL fees",
+    "Transaction due to account freezing"
+  ],
+  "subheads": {
+    "Sales Collection": [
+      "New Auto",
+      "FS-MP",
+      "Used Car",
+      "Non Auto",
+      "Crack-Ed",
+      "Mobility",
+      "ID",
+      "TBD"
+    ],
+    "Other Receipts": [
+      "ESOP related receipts",
+      "Security Deposit",
+      "Other receipts"
+    ],
+    "Salary and Related": [
+      "Salary payment including ESI, EPF, Ptax, etc",
+      "Reimbursement to employees",
+      "TDS on On Roll Salary"
+    ],
+    "Tax Payments (GST & TDS Excl. Salaries)": [
+      "TDS ( other than Salary)",
+      "GST Paid",
+      "IT Refund",
+      "Other taxes"
+    ],
+    "Vendor Payment": [
+      "Commission payouts",
+      "Marketing",
+      "WSS",
+      "LPS",
+      "RFC",
+      "Production expense - PD",
+      "MRC",
+      "Valuations",
+      "R&M",
+      "Capex",
+      "Other opex",
+      "EMD",
+      "Group Medical insurance",
+      "Purchase of Vehicle",
+      "Others"
+    ],
+    "Other Payments": [
+      "Bank charges",
+      "Credit card payment",
+      "Dealer Refund",
+      "Other Payments"
+    ],
+    "Contra - DSA accounts": [],
+    "Contra - Unidentified": [],
+    "Treasury receipts": [
+      "Interest income",
+      "MTM gain",
+      "Realised gain on investments",
+      "Interest on bonds"
+    ],
+    "Sale / Purchase of FD & Investments": [
+      "FD redeem",
+      "FD made",
+      "Other investments made",
+      "Other investments redeemed"
+    ],
+    "Inter Group Receipts / Payments (other than Girnar India)": [
+      "Payments to GCAP"
+    ],
+    "Investment in subsidiaries": [
+      "InsuranceDekho",
+      "Next Tech"
+    ],
+    "Investment in associates": [
+      "CollegeDekho"
+    ],
+    "Interest & WCTL fees": [],
+    "Transaction due to account freezing": []
+  },
+  "descriptions": {
+    "Sales Collection": "Car sales from new auto business (CarDekho new cars)",
+    "Other Receipts": "ESOP exercise payments from employees into salary accounts",
+    "Salary and Related": "Actual salary disbursement, PF, ESI, professional tax",
+    "Tax Payments (GST & TDS Excl. Salaries)": "TDS on vendor payments, professional fees etc. Note the space before 'other'",
+    "Vendor Payment": "DSA/agent commission disbursements (mainly GSPL_3189)",
+    "Other Payments": "MDR, GST on bank services, CC MDR, Softex commission, EROUTE, small GST amounts",
+    "Contra - DSA accounts": "Transfers to DSA account 3352 from non-DSA accounts",
+    "Contra - Unidentified": "Suspected contra but cannot confirm the matching leg",
+    "Treasury receipts": "ONLY for bank account deposit interest (DEPOSIT INTEREST on HSBC). FD interest and Int on FD/RD should go to FD redeem \u2014 user will split later.",
+    "Sale / Purchase of FD & Investments": "FD principal closure/redemption. NOTE: use this exact head with spaces around /",
+    "Inter Group Receipts / Payments (other than Girnar India)": "Payments to Girnar Capital Pvt Ltd",
+    "Investment in subsidiaries": "Investment flows from InsuranceDekho (via Varalakshmi Enterprises)",
+    "Investment in associates": "Loan refund/investment return from CollegeDekho",
+    "Interest & WCTL fees": "OD interest charges (Int.Coll on Kotak, DEBIT INTEREST on HSBC)",
+    "Transaction due to account freezing": "Only for AXOS transactions on GSPL-Yes-0286. Account freezing related"
+  }
+}
