@@ -4,7 +4,7 @@ Three-layer classification engine for CICO bank statement rows.
 
 Layer 0: DSA Skip
 Layer 1: Granular Lookup (classification_rules.json)
-Layer 2: Pattern Rules  (pattern_rules.json + account_master.json)
+Layer 2: Pattern Rules  (pattern_rules_raw.json + account_master.json)
 Layer 3: AI Fallback    (Anthropic API)
 """
 
@@ -26,7 +26,7 @@ _DATA = os.path.join(_BASE, "data")
 _LOGS = os.path.join(_BASE, "logs")
 
 RULES_JSON    = os.path.join(_DATA, "classification_rules.json")
-PATTERNS_JSON = os.path.join(_DATA, "pattern_rules.json")
+PATTERNS_JSON = os.path.join(_DATA, "pattern_rules_raw.json")
 ACCOUNT_JSON  = os.path.join(_DATA, "account_master.json")
 HEADS_JSON    = os.path.join(_DATA, "valid_heads.json")
 AI_LOG_CSV    = os.path.join(_LOGS, "cico_ai_log.csv")
@@ -173,8 +173,7 @@ class CICOClassifier:
         self._ai_client    = None
         if api_key:
             self._ai_client = anthropic.Anthropic(api_key=api_key)
-        os.makedirs(_LOGS, exist_ok=True)
-        self._ai_log_init()
+                self._ai_log_init()
 
         # Build lookup index: account_name -> list of rules (preserving order)
         self._rule_index: dict[str, list] = {}
